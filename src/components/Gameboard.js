@@ -62,8 +62,11 @@ export default function Gameboard() {
       name: "Paratroopa",
     },
   ];
+  function shuffle(array) {
+    return [...array].sort(() => Math.random() - 0.5);
+  }
   function DisplayCards() {
-    const list = cards.map((element) => {
+    const list = shuffle(cards).map((element) => {
       return (
         <div className="card">
           <img src={element.src} alt={element.name}></img>
