@@ -5,6 +5,20 @@ function App() {
   return (
     <div className="container">
       <Header></Header>
+      <div className="card-container">
+        <div className="card"></div>
+        <div className="card"></div>
+        <div className="card"></div>
+        <div className="card"></div>
+        <div className="card"></div>
+        <div className="card"></div>
+        <div className="card"></div>
+        <div className="card"></div>
+        <div className="card"></div>
+        <div className="card"></div>
+        <div className="card"></div>
+        <div className="card"></div>
+      </div>
       <Footer></Footer>
     </div>
   );
