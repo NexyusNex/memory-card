@@ -76,7 +76,9 @@ export default function Gameboard() {
     },
   ];
   const [cards, setCards] = useState([]);
-  const [mount, setMount] = useState([0]);
+  const [mount, setMount] = useState(0);
+  const [score, setScore] = useState(0);
+  const [max, setMax] = useState(0);
   useEffect(() => {
     if (mount === 0) {
       setCards(array);
