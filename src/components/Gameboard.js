@@ -90,15 +90,21 @@ export default function Gameboard() {
     setCards((cards) => shuffled);
   }
   return (
-    <div className="card-container">
-      {cards.map((element) => {
-        return (
-          <div className="card" onClick={shuffle} key={element.id}>
-            <img src={element.src} alt={element.name}></img>
-            <p>{element.name}</p>
-          </div>
-        );
-      })}
+    <div className="content">
+      <div className="score">
+        <p>Score:</p>
+        <p>Max score:</p>
+      </div>
+      <div className="card-container">
+        {cards.map((element) => {
+          return (
+            <div className="card" onClick={shuffle} key={element.id}>
+              <img src={element.src} alt={element.name}></img>
+              <p>{element.name}</p>
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 }

@@ -25,9 +25,14 @@ body {
   display: flex;
   color: #eff6ff;
   padding: 25px;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: center;
   width: 500px;
+}
+
+.content {
+  width: 100%;
+  text-align: center;
+  color: #eff6ff;
 }
 
 .card-container {
@@ -45,7 +50,6 @@ body {
   height: 300px;
   display: flex;
   flex-direction: column;
-  color: #eff6ff;
   align-items: center;
   justify-content: center;
 }
