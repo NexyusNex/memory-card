@@ -79,26 +79,51 @@ export default function Gameboard() {
   const [mount, setMount] = useState(0);
   const [score, setScore] = useState(0);
   const [max, setMax] = useState(0);
+  const [selected, setSelected] = useState([]);
+
   useEffect(() => {
     if (mount === 0) {
       setCards(array);
       setMount(1);
     }
   });
+
   function shuffle() {
     const shuffled = array.sort(() => Math.random() - 0.5);
     setCards((cards) => shuffled);
   }
+
+  function clickCard(e) {
+    console.log(Array.isArray(selected));
+    const id = e.currentTarget.id;
+    if (!selected.includes(id)) {
+      setScore((score) => score + 1);
+      setSelected((select) => [...select, id]);
+    } else {
+      if (max < score) {
+        setMax((max) => score);
+      }
+      setScore(0);
+      setSelected([]);
+    }
+    shuffle();
+  }
+
   return (
     <div className="content">
       <div className="score">
-        <p>Score:</p>
-        <p>Max score:</p>
+        <p>Score: {score}</p>
+        <p>Max score: {max}</p>
       </div>
       <div className="card-container">
         {cards.map((element) => {
           return (
-            <div className="card" onClick={shuffle} key={element.id}>
+            <div
+              className="card"
+              onClick={clickCard}
+              key={element.id}
+              id={element.id}
+            >
               <img src={element.src} alt={element.name}></img>
               <p>{element.name}</p>
             </div>
