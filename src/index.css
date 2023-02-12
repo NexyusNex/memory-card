@@ -45,6 +45,15 @@ body {
   height: 300px;
 }
 
+.card:hover {
+  background-color: #60a5fa;
+  cursor: pointer;
+}
+
+.card:active {
+  background-color: #93c5fd;
+}
+
 .footer {
   margin-top: auto;
   padding: 10px 0;

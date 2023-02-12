@@ -1,24 +1,12 @@
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import Gameboard from "./components/Gameboard";
 
 function App() {
   return (
     <div className="container">
       <Header></Header>
-      <div className="card-container">
-        <div className="card"></div>
-        <div className="card"></div>
-        <div className="card"></div>
-        <div className="card"></div>
-        <div className="card"></div>
-        <div className="card"></div>
-        <div className="card"></div>
-        <div className="card"></div>
-        <div className="card"></div>
-        <div className="card"></div>
-        <div className="card"></div>
-        <div className="card"></div>
-      </div>
+      <Gameboard></Gameboard>
       <Footer></Footer>
     </div>
   );
