@@ -26,3 +26,12 @@
   align-items: center;
   width: 500px;
 }
+
+.footer {
+  margin-top: auto;
+  padding: 10px 0;
+  color: #eff6ff;
+  background-color: #1d4ed8;
+  width: 100%;
+  text-align: center;
+}
