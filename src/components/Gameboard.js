@@ -94,8 +94,11 @@ export default function Gameboard() {
   }
 
   function clickCard(e) {
-    console.log(Array.isArray(selected));
     const id = e.currentTarget.id;
+    console.log(score);
+    if (score === 11) {
+      setSelected([]);
+    }
     if (!selected.includes(id)) {
       setScore((score) => score + 1);
       setSelected((select) => [...select, id]);

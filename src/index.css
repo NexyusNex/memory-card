@@ -25,8 +25,12 @@ body {
   display: flex;
   color: #eff6ff;
   padding: 25px;
-  justify-content: center;
-  width: 500px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header p {
+  width: 40%;
 }
 
 .content {
