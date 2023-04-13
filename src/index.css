@@ -45,7 +45,7 @@ body {
   width: 100%;
   grid-template-columns: repeat(auto-fit, minmax(200px, 270px));
   gap: 20px;
-  padding: 20px 0;
+  padding: 20px 20px;
 }
 
 .card {
@@ -79,4 +79,23 @@ body {
   color: #eff6ff;
   width: 100%;
   text-align: center;
+}
+
+@media screen and (width<=600px) {
+  .header {
+    flex-direction: column;
+    text-align: center;
+    gap: 24px;
+  }
+  .card-container {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 170px));
+  }
+  .card {
+    height: 150px;
+    justify-content: space-around;
+  }
+  .card img {
+    margin-bottom: 0;
+    height: 80px;
+  }
 }
